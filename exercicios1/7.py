@@ -1,0 +1,11 @@
+produto = {"categoria": "eletrônico", "preco": 1500}
+
+match produto:
+    case {"categoria": "eletrônico", "preco": p} if p > 1000:
+        print("Produto de luxo")
+    case {"categoria": "eletrônico"}:
+        print("Produto comum")
+    case {"categoria": "alimento"}:
+        print("Produto alimentar")
+    case _:
+        print("Categoria desconhecida")
